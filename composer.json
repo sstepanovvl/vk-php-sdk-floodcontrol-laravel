@@ -1,0 +1,33 @@
+{
+    "name": "sstepanovvl/vk-php-sdk-floodcontrol-laravel",
+    "description": "Package will handle throttling to VK API relies to VK API Rate limits",
+    "license": "MIT",
+    "require": {
+        "laravel/laravel": "^5.1",
+        "vkcom/vk-php-sdk": "^5.101",
+        "predis/predis": "^1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "authors": [
+        {
+            "name": "Stepan Stepanov",
+            "email": "sstepanovvl@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SSV\\VKAntiFlood\\" : "src/",
+            "VK\\Client\\" : "src/OverriddenClasses/VK/Client/",
+            "Tests\\" : "tests/"
+        }
+    },
+    "extra": {
+        "laravel" : {
+            "providers" : [
+                "SSV\\VKAntiFlood\\Providers\\VKAntiFloodServiceProvider"
+            ]
+        }
+    }
+}
